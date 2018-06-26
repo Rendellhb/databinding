@@ -62,6 +62,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
 ```
   
   ActivityScrollingBinding is a generated class
+  
   BR is a generated class
   
   That's it ready to GO
