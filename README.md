@@ -24,12 +24,14 @@ data class Description(val description: String)
 
 add at the top of your XML the layout tag
 
+```xml
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
     <variable
       name="description"
       type="com.estudos.rendell.kotlinestudos.feature.Description" />
   ...
 </layout>
+```
 
 Then link the variable to your View
 
