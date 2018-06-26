@@ -1,5 +1,5 @@
 # databinding
-Studying data binding
+Studying data binding in Kotlin
 
 I realized that it doens't work if you have a included view on your primary view.
 
