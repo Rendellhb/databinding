@@ -5,6 +5,7 @@ I realized that it doens't work if you have a included view on your primary view
 
 First of all turn on data binding
 
+```
 android {
   ...
   dataBinding {
@@ -12,15 +13,20 @@ android {
     }
     ...
 }
+```
 
 Then Add plugin
+```
 apply plugin: 'kotlin-kapt'
+```
 
 Don't wory about adding dependencies Gradle will do it automatically for you
 
 Now is the time to add your binding class
 
+```
 data class Description(val description: String)
+```
 
 add at the top of your XML the layout tag
 
@@ -35,13 +41,16 @@ add at the top of your XML the layout tag
 
 Then link the variable to your View
 
+```
 <TextView
   android:layout_width="wrap_content"
   android:layout_height="wrap_content"
   android:text="@{description.description}" />
-  
+```
+
 Now go to your activity
   
+```
 override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     val binding = DataBindingUtil.setContentView<ActivityScrollingBinding>(this, R.layout.activity_scrolling)
@@ -50,6 +59,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
     binding.setVariable(BR.description, description)
     binding.executePendingBindings()
 }
+```
   
   ActivityScrollingBinding is a generated class
   BR is a generated class
